@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F4522E52480B87900E53BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4522E42480B87900E53BBF /* Assets.xcassets */; };
+		0F4522E82480B87900E53BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4522E62480B87900E53BBF /* LaunchScreen.storyboard */; };
+		0F4522F62480BA1B00E53BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522F22480BA1B00E53BBF /* AppDelegate.swift */; };
+		0F4522FD2480BB9700E53BBF /* BaseRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522F72480BB9700E53BBF /* BaseRefreshController.swift */; };
+		0F4522FE2480BB9700E53BBF /* BaseMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522F82480BB9700E53BBF /* BaseMacro.swift */; };
+		0F4522FF2480BB9700E53BBF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522F92480BB9700E53BBF /* BaseNavigationController.swift */; };
+		0F4523002480BB9700E53BBF /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522FA2480BB9700E53BBF /* BaseTableViewController.swift */; };
+		0F4523012480BB9700E53BBF /* BaseConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522FB2480BB9700E53BBF /* BaseConnectionController.swift */; };
+		0F4523022480BB9700E53BBF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522FC2480BB9700E53BBF /* BaseViewController.swift */; };
+		0F4523082480BC9000E53BBF /* ATTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523072480BC9000E53BBF /* ATTabBarController.swift */; };
+		0F45230B2480BF9B00E53BBF /* ATHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230A2480BF9B00E53BBF /* ATHomeController.swift */; };
+		0F45230D2480D7D600E53BBF /* ATHomeContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */; };
+		0F45230F2480D9BF00E53BBF /* ATHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230E2480D9BF00E53BBF /* ATHotController.swift */; };
+		0F4523122480DC4000E53BBF /* ATMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523112480DC4000E53BBF /* ATMoya.swift */; };
+		0F4523142480DF2E00E53BBF /* ATBaseMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523132480DF2E00E53BBF /* ATBaseMoya.swift */; };
+		0F4523162480E77C00E53BBF /* ATVipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523152480E77C00E53BBF /* ATVipController.swift */; };
+		0F4523182480E78C00E53BBF /* ATRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523172480E78C00E53BBF /* ATRankController.swift */; };
+		0F45231A2480E96200E53BBF /* ATSubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523192480E96200E53BBF /* ATSubController.swift */; };
+		0F45231F2480EBC500E53BBF /* ATRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45231D2480EBC500E53BBF /* ATRankCell.swift */; };
+		0F4523202480EBC500E53BBF /* ATRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F45231E2480EBC500E53BBF /* ATRankCell.xib */; };
+		0F4523222480ED1F00E53BBF /* ATRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523212480ED1F00E53BBF /* ATRankModel.swift */; };
+		0F4523242480F90400E53BBF /* ATHomeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523232480F90400E53BBF /* ATHomeInfo.swift */; };
+		0F4523272480FC2500E53BBF /* ATVipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523252480FC2500E53BBF /* ATVipCell.swift */; };
+		0F4523282480FC2500E53BBF /* ATVipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4523262480FC2500E53BBF /* ATVipCell.xib */; };
+		0F45232B2481017200E53BBF /* ATVipReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523292481017200E53BBF /* ATVipReusableView.swift */; };
+		0F45232C2481017200E53BBF /* ATVipReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F45232A2481017200E53BBF /* ATVipReusableView.xib */; };
+		1859F88B714A1B4B10AD677D /* Pods_ATCarToon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99502043002DDAF48A2BC716 /* Pods_ATCarToon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F4522D82480B87700E53BBF /* ATCarToon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATCarToon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4522E42480B87900E53BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F4522E72480B87900E53BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F4522E92480B87900E53BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F4522F22480BA1B00E53BBF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F4522F72480BB9700E53BBF /* BaseRefreshController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRefreshController.swift; sourceTree = "<group>"; };
+		0F4522F82480BB9700E53BBF /* BaseMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMacro.swift; sourceTree = "<group>"; };
+		0F4522F92480BB9700E53BBF /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		0F4522FA2480BB9700E53BBF /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		0F4522FB2480BB9700E53BBF /* BaseConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnectionController.swift; sourceTree = "<group>"; };
+		0F4522FC2480BB9700E53BBF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0F4523032480BC0E00E53BBF /* ATCarToon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ATCarToon-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F4523072480BC9000E53BBF /* ATTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTabBarController.swift; sourceTree = "<group>"; };
+		0F45230A2480BF9B00E53BBF /* ATHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHomeController.swift; sourceTree = "<group>"; };
+		0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHomeContentController.swift; sourceTree = "<group>"; };
+		0F45230E2480D9BF00E53BBF /* ATHotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHotController.swift; sourceTree = "<group>"; };
+		0F4523112480DC4000E53BBF /* ATMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMoya.swift; sourceTree = "<group>"; };
+		0F4523132480DF2E00E53BBF /* ATBaseMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATBaseMoya.swift; sourceTree = "<group>"; };
+		0F4523152480E77C00E53BBF /* ATVipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATVipController.swift; sourceTree = "<group>"; };
+		0F4523172480E78C00E53BBF /* ATRankController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATRankController.swift; sourceTree = "<group>"; };
+		0F4523192480E96200E53BBF /* ATSubController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSubController.swift; sourceTree = "<group>"; };
+		0F45231D2480EBC500E53BBF /* ATRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATRankCell.swift; sourceTree = "<group>"; };
+		0F45231E2480EBC500E53BBF /* ATRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATRankCell.xib; sourceTree = "<group>"; };
+		0F4523212480ED1F00E53BBF /* ATRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATRankModel.swift; sourceTree = "<group>"; };
+		0F4523232480F90400E53BBF /* ATHomeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHomeInfo.swift; sourceTree = "<group>"; };
+		0F4523252480FC2500E53BBF /* ATVipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATVipCell.swift; sourceTree = "<group>"; };
+		0F4523262480FC2500E53BBF /* ATVipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATVipCell.xib; sourceTree = "<group>"; };
+		0F4523292481017200E53BBF /* ATVipReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATVipReusableView.swift; sourceTree = "<group>"; };
+		0F45232A2481017200E53BBF /* ATVipReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATVipReusableView.xib; sourceTree = "<group>"; };
+		5B7E02532F0920F6365BBC3F /* Pods-ATCarToon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATCarToon.debug.xcconfig"; path = "Target Support Files/Pods-ATCarToon/Pods-ATCarToon.debug.xcconfig"; sourceTree = "<group>"; };
+		6A29F3C38888312A6D205485 /* Pods-ATCarToon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATCarToon.release.xcconfig"; path = "Target Support Files/Pods-ATCarToon/Pods-ATCarToon.release.xcconfig"; sourceTree = "<group>"; };
+		99502043002DDAF48A2BC716 /* Pods_ATCarToon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATCarToon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F4522D52480B87700E53BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1859F88B714A1B4B10AD677D /* Pods_ATCarToon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F4522CF2480B87700E53BBF = {
+			isa = PBXGroup;
+			children = (
+				0F4522DA2480B87700E53BBF /* ATCarToon */,
+				0F4522D92480B87700E53BBF /* Products */,
+				8AE4B6D2E30217A568BD03D5 /* Pods */,
+				DA494F5DED118F6A35A49203 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0F4522D92480B87700E53BBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F4522D82480B87700E53BBF /* ATCarToon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F4522DA2480B87700E53BBF /* ATCarToon */ = {
+			isa = PBXGroup;
+			children = (
+				0F4523102480DC1100E53BBF /* Moya */,
+				0F4522F02480BA1B00E53BBF /* App */,
+				0F4522E42480B87900E53BBF /* Assets.xcassets */,
+				0F4522F42480BA1B00E53BBF /* Base */,
+				0F4522F32480BA1B00E53BBF /* Class */,
+				0F4522E92480B87900E53BBF /* Info.plist */,
+				0F4522E62480B87900E53BBF /* LaunchScreen.storyboard */,
+				0F4522EF2480BA1B00E53BBF /* Tool */,
+			);
+			path = ATCarToon;
+			sourceTree = "<group>";
+		};
+		0F4522EF2480BA1B00E53BBF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		0F4522F02480BA1B00E53BBF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F4522F22480BA1B00E53BBF /* AppDelegate.swift */,
+				0F4523032480BC0E00E53BBF /* ATCarToon-Bridging-Header.h */,
+				0F4523072480BC9000E53BBF /* ATTabBarController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0F4522F32480BA1B00E53BBF /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0F4523092480BF8600E53BBF /* Home */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0F4522F42480BA1B00E53BBF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0F4522FB2480BB9700E53BBF /* BaseConnectionController.swift */,
+				0F4522F82480BB9700E53BBF /* BaseMacro.swift */,
+				0F4522F92480BB9700E53BBF /* BaseNavigationController.swift */,
+				0F4522F72480BB9700E53BBF /* BaseRefreshController.swift */,
+				0F4522FA2480BB9700E53BBF /* BaseTableViewController.swift */,
+				0F4522FC2480BB9700E53BBF /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0F4523092480BF8600E53BBF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F45231C2480EBB200E53BBF /* Cell */,
+				0F45231B2480EBB200E53BBF /* Model */,
+				0F45230A2480BF9B00E53BBF /* ATHomeController.swift */,
+				0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */,
+				0F45230E2480D9BF00E53BBF /* ATHotController.swift */,
+				0F4523152480E77C00E53BBF /* ATVipController.swift */,
+				0F4523172480E78C00E53BBF /* ATRankController.swift */,
+				0F4523192480E96200E53BBF /* ATSubController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0F4523102480DC1100E53BBF /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				0F4523112480DC4000E53BBF /* ATMoya.swift */,
+				0F4523132480DF2E00E53BBF /* ATBaseMoya.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		0F45231B2480EBB200E53BBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F4523212480ED1F00E53BBF /* ATRankModel.swift */,
+				0F4523232480F90400E53BBF /* ATHomeInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F45231C2480EBB200E53BBF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F45231D2480EBC500E53BBF /* ATRankCell.swift */,
+				0F45231E2480EBC500E53BBF /* ATRankCell.xib */,
+				0F4523252480FC2500E53BBF /* ATVipCell.swift */,
+				0F4523262480FC2500E53BBF /* ATVipCell.xib */,
+				0F4523292481017200E53BBF /* ATVipReusableView.swift */,
+				0F45232A2481017200E53BBF /* ATVipReusableView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8AE4B6D2E30217A568BD03D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7E02532F0920F6365BBC3F /* Pods-ATCarToon.debug.xcconfig */,
+				6A29F3C38888312A6D205485 /* Pods-ATCarToon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA494F5DED118F6A35A49203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99502043002DDAF48A2BC716 /* Pods_ATCarToon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F4522D72480B87700E53BBF /* ATCarToon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F4522EC2480B87900E53BBF /* Build configuration list for PBXNativeTarget "ATCarToon" */;
+			buildPhases = (
+				9C45C65DA8F2E55B0E49426A /* [CP] Check Pods Manifest.lock */,
+				0F4522D42480B87700E53BBF /* Sources */,
+				0F4522D52480B87700E53BBF /* Frameworks */,
+				0F4522D62480B87700E53BBF /* Resources */,
+				3EBB92FB89D0B48092B43D70 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATCarToon;
+			productName = ATCarToon;
+			productReference = 0F4522D82480B87700E53BBF /* ATCarToon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F4522D02480B87700E53BBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = wangws1990;
+				TargetAttributes = {
+					0F4522D72480B87700E53BBF = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+				};
+			};
+			buildConfigurationList = 0F4522D32480B87700E53BBF /* Build configuration list for PBXProject "ATCarToon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F4522CF2480B87700E53BBF;
+			productRefGroup = 0F4522D92480B87700E53BBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F4522D72480B87700E53BBF /* ATCarToon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F4522D62480B87700E53BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4523202480EBC500E53BBF /* ATRankCell.xib in Resources */,
+				0F45232C2481017200E53BBF /* ATVipReusableView.xib in Resources */,
+				0F4522E82480B87900E53BBF /* LaunchScreen.storyboard in Resources */,
+				0F4523282480FC2500E53BBF /* ATVipCell.xib in Resources */,
+				0F4522E52480B87900E53BBF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EBB92FB89D0B48092B43D70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATCarToon/Pods-ATCarToon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATCarToon/Pods-ATCarToon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATCarToon/Pods-ATCarToon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C45C65DA8F2E55B0E49426A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATCarToon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F4522D42480B87700E53BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4523162480E77C00E53BBF /* ATVipController.swift in Sources */,
+				0F45230B2480BF9B00E53BBF /* ATHomeController.swift in Sources */,
+				0F4523082480BC9000E53BBF /* ATTabBarController.swift in Sources */,
+				0F45231A2480E96200E53BBF /* ATSubController.swift in Sources */,
+				0F45232B2481017200E53BBF /* ATVipReusableView.swift in Sources */,
+				0F4523122480DC4000E53BBF /* ATMoya.swift in Sources */,
+				0F4523002480BB9700E53BBF /* BaseTableViewController.swift in Sources */,
+				0F4523182480E78C00E53BBF /* ATRankController.swift in Sources */,
+				0F4523012480BB9700E53BBF /* BaseConnectionController.swift in Sources */,
+				0F4523242480F90400E53BBF /* ATHomeInfo.swift in Sources */,
+				0F4522F62480BA1B00E53BBF /* AppDelegate.swift in Sources */,
+				0F4523272480FC2500E53BBF /* ATVipCell.swift in Sources */,
+				0F45230F2480D9BF00E53BBF /* ATHotController.swift in Sources */,
+				0F45230D2480D7D600E53BBF /* ATHomeContentController.swift in Sources */,
+				0F4522FD2480BB9700E53BBF /* BaseRefreshController.swift in Sources */,
+				0F4523222480ED1F00E53BBF /* ATRankModel.swift in Sources */,
+				0F4523022480BB9700E53BBF /* BaseViewController.swift in Sources */,
+				0F4522FF2480BB9700E53BBF /* BaseNavigationController.swift in Sources */,
+				0F4522FE2480BB9700E53BBF /* BaseMacro.swift in Sources */,
+				0F45231F2480EBC500E53BBF /* ATRankCell.swift in Sources */,
+				0F4523142480DF2E00E53BBF /* ATBaseMoya.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0F4522E62480B87900E53BBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F4522E72480B87900E53BBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F4522EA2480B87900E53BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0F4522EB2480B87900E53BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F4522ED2480B87900E53BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7E02532F0920F6365BBC3F /* Pods-ATCarToon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ATCarToon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangws1990.ATCarToon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ATCarToon/App/ATCarToon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F4522EE2480B87900E53BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A29F3C38888312A6D205485 /* Pods-ATCarToon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ATCarToon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangws1990.ATCarToon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ATCarToon/App/ATCarToon-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F4522D32480B87700E53BBF /* Build configuration list for PBXProject "ATCarToon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F4522EA2480B87900E53BBF /* Debug */,
+				0F4522EB2480B87900E53BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F4522EC2480B87900E53BBF /* Build configuration list for PBXNativeTarget "ATCarToon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F4522ED2480B87900E53BBF /* Debug */,
+				0F4522EE2480B87900E53BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F4522D02480B87700E53BBF /* Project object */;
+}
