@@ -1,5 +1,5 @@
 //
-//  BaseCollectionViewController.swift
+//  BaseConnectionController.swift
 //  GKGame_Swift
 //
 //  Created by wangws1990 on 2019/9/30.

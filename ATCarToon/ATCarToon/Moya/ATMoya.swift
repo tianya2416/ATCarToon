@@ -15,6 +15,10 @@ public enum ATMoya{
     case apiVip
     case apiSub
     case apiRank
+    case apiComicList(argCon: Int, argName: String, argValue: Int, page: Int)
+    case apiDetail(comicid:String)
+    case apiDetailReal(comicid:String)
+    case apiComment(comicId: String, thread_id: String,page: Int)
 }
 extension ATMoya : TargetType{
     public static func apiMoya(target: ATMoya,sucesss:@escaping ((_ object : JSON) ->()),failure:@escaping ((_ error : String) ->())){
@@ -48,12 +52,28 @@ extension ATMoya : TargetType{
             return "list/newSubscribeList";
         case .apiRank:
             return "rank/list";
+        case .apiComicList:
+            return "list/commonComicList";
+        case .apiDetail:
+            return "comic/detail_static_new"
+        case .apiDetailReal:
+            return "comic/detail_realtime"
+        case .apiComment:
+            return "comment/list"
         }
     }
     public var task: Task {
         switch self {
         case let .apiHot(sexType:sexType):
             return .requestParameters(parameters:["sexType":sexType], encoding: URLEncoding.default);
+        case let .apiComicList(argCon: argCon, argName: argName, argValue: argValue, page: page):
+            return .requestParameters(parameters:["argCon":argCon,"argName":argName ,"argValue":argValue,"page":page], encoding: URLEncoding.default);
+        case let .apiDetail(comicid: comicid):
+            return .requestParameters(parameters:["comicid":comicid], encoding: URLEncoding.default);
+        case let .apiDetailReal(comicid: comicid):
+            return .requestParameters(parameters:["comicid":comicid], encoding: URLEncoding.default);
+        case let .apiComment(comicId: comicId, thread_id: thread_id,page: page):
+            return .requestParameters(parameters:["object_id":comicId,"thread_id":thread_id,"page":page], encoding: URLEncoding.default);
         default:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default);
         }

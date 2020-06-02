@@ -21,5 +21,6 @@ target 'ATCarToon' do
   pod 'VTMagic','~> 1.2.4'
   pod 'FMDB'
   pod 'YNPageViewController'
+  pod 'SDCycleScrollView'
 end
 

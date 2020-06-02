@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible();
         self.window?.backgroundColor = UIColor.white;
-        self.window?.rootViewController = ATHomeContentController();
+        let nvc = BaseNavigationController.init(rootViewController: ATHomeContentController())
+        self.window?.rootViewController = nvc;
         return true
 
     }

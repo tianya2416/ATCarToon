@@ -3,4 +3,6 @@
 //
 
 #import "VTMagic.h"
+#import "SDCycleScrollView.h"
+#import "YNPageViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"

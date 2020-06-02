@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2B4374248493B400895C05 /* ATHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B4372248493B400895C05 /* ATHotCell.swift */; };
+		0F2B4375248493B400895C05 /* ATHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B4373248493B400895C05 /* ATHotCell.xib */; };
+		0F2B43772484D27A00895C05 /* ATMoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B43762484D27A00895C05 /* ATMoreController.swift */; };
+		0F2B43792484D40600895C05 /* ATJump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B43782484D40600895C05 /* ATJump.swift */; };
+		0F2B437C2484DB6D00895C05 /* ATMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B437A2484DB6D00895C05 /* ATMoreCell.swift */; };
+		0F2B437D2484DB6D00895C05 /* ATMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B437B2484DB6D00895C05 /* ATMoreCell.xib */; };
+		0F2B43802484F43200895C05 /* ATDetailContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B437F2484F43200895C05 /* ATDetailContoller.swift */; };
 		0F4522E52480B87900E53BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4522E42480B87900E53BBF /* Assets.xcassets */; };
 		0F4522E82480B87900E53BBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4522E62480B87900E53BBF /* LaunchScreen.storyboard */; };
 		0F4522F62480BA1B00E53BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522F22480BA1B00E53BBF /* AppDelegate.swift */; };
@@ -17,7 +24,6 @@
 		0F4523012480BB9700E53BBF /* BaseConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522FB2480BB9700E53BBF /* BaseConnectionController.swift */; };
 		0F4523022480BB9700E53BBF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4522FC2480BB9700E53BBF /* BaseViewController.swift */; };
 		0F4523082480BC9000E53BBF /* ATTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523072480BC9000E53BBF /* ATTabBarController.swift */; };
-		0F45230B2480BF9B00E53BBF /* ATHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230A2480BF9B00E53BBF /* ATHomeController.swift */; };
 		0F45230D2480D7D600E53BBF /* ATHomeContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */; };
 		0F45230F2480D9BF00E53BBF /* ATHotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45230E2480D9BF00E53BBF /* ATHotController.swift */; };
 		0F4523122480DC4000E53BBF /* ATMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523112480DC4000E53BBF /* ATMoya.swift */; };
@@ -33,10 +39,29 @@
 		0F4523282480FC2500E53BBF /* ATVipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4523262480FC2500E53BBF /* ATVipCell.xib */; };
 		0F45232B2481017200E53BBF /* ATVipReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4523292481017200E53BBF /* ATVipReusableView.swift */; };
 		0F45232C2481017200E53BBF /* ATVipReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F45232A2481017200E53BBF /* ATVipReusableView.xib */; };
+		0F45232E248117E300E53BBF /* ATHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F45232D248117E300E53BBF /* ATHotModel.swift */; };
+		0F9B3BBB2484F80E008CF556 /* ATCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BBA2484F80E008CF556 /* ATCommentController.swift */; };
+		0F9B3BBD2484F81F008CF556 /* ATChapterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BBC2484F81F008CF556 /* ATChapterController.swift */; };
+		0F9B3BBF2484F831008CF556 /* ATContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BBE2484F831008CF556 /* ATContentController.swift */; };
+		0F9B3BC12484F957008CF556 /* ATDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BC02484F957008CF556 /* ATDetailTopView.swift */; };
+		0F9B3BC32484F961008CF556 /* ATDetailTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9B3BC22484F961008CF556 /* ATDetailTopView.xib */; };
+		0FDF6B092485FF9400B6E216 /* ATChapterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B082485FF9400B6E216 /* ATChapterItem.swift */; };
+		0FDF6B0C248603A300B6E216 /* ATChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B0A248603A300B6E216 /* ATChapterCell.swift */; };
+		0FDF6B0D248603A300B6E216 /* ATChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FDF6B0B248603A300B6E216 /* ATChapterCell.xib */; };
+		0FDF6B0F248635B500B6E216 /* ATComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B0E248635B500B6E216 /* ATComment.swift */; };
+		0FDF6B12248637DB00B6E216 /* ATCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B10248637DB00B6E216 /* ATCommentCell.swift */; };
+		0FDF6B13248637DB00B6E216 /* ATCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FDF6B11248637DB00B6E216 /* ATCommentCell.xib */; };
 		1859F88B714A1B4B10AD677D /* Pods_ATCarToon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99502043002DDAF48A2BC716 /* Pods_ATCarToon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2B4372248493B400895C05 /* ATHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHotCell.swift; sourceTree = "<group>"; };
+		0F2B4373248493B400895C05 /* ATHotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATHotCell.xib; sourceTree = "<group>"; };
+		0F2B43762484D27A00895C05 /* ATMoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMoreController.swift; sourceTree = "<group>"; };
+		0F2B43782484D40600895C05 /* ATJump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATJump.swift; sourceTree = "<group>"; };
+		0F2B437A2484DB6D00895C05 /* ATMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMoreCell.swift; sourceTree = "<group>"; };
+		0F2B437B2484DB6D00895C05 /* ATMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATMoreCell.xib; sourceTree = "<group>"; };
+		0F2B437F2484F43200895C05 /* ATDetailContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDetailContoller.swift; sourceTree = "<group>"; };
 		0F4522D82480B87700E53BBF /* ATCarToon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATCarToon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4522E42480B87900E53BBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F4522E72480B87900E53BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +75,6 @@
 		0F4522FC2480BB9700E53BBF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0F4523032480BC0E00E53BBF /* ATCarToon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ATCarToon-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F4523072480BC9000E53BBF /* ATTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTabBarController.swift; sourceTree = "<group>"; };
-		0F45230A2480BF9B00E53BBF /* ATHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHomeController.swift; sourceTree = "<group>"; };
 		0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHomeContentController.swift; sourceTree = "<group>"; };
 		0F45230E2480D9BF00E53BBF /* ATHotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHotController.swift; sourceTree = "<group>"; };
 		0F4523112480DC4000E53BBF /* ATMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMoya.swift; sourceTree = "<group>"; };
@@ -66,6 +90,18 @@
 		0F4523262480FC2500E53BBF /* ATVipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATVipCell.xib; sourceTree = "<group>"; };
 		0F4523292481017200E53BBF /* ATVipReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATVipReusableView.swift; sourceTree = "<group>"; };
 		0F45232A2481017200E53BBF /* ATVipReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATVipReusableView.xib; sourceTree = "<group>"; };
+		0F45232D248117E300E53BBF /* ATHotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATHotModel.swift; sourceTree = "<group>"; };
+		0F9B3BBA2484F80E008CF556 /* ATCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCommentController.swift; sourceTree = "<group>"; };
+		0F9B3BBC2484F81F008CF556 /* ATChapterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChapterController.swift; sourceTree = "<group>"; };
+		0F9B3BBE2484F831008CF556 /* ATContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATContentController.swift; sourceTree = "<group>"; };
+		0F9B3BC02484F957008CF556 /* ATDetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDetailTopView.swift; sourceTree = "<group>"; };
+		0F9B3BC22484F961008CF556 /* ATDetailTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATDetailTopView.xib; sourceTree = "<group>"; };
+		0FDF6B082485FF9400B6E216 /* ATChapterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChapterItem.swift; sourceTree = "<group>"; };
+		0FDF6B0A248603A300B6E216 /* ATChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChapterCell.swift; sourceTree = "<group>"; };
+		0FDF6B0B248603A300B6E216 /* ATChapterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATChapterCell.xib; sourceTree = "<group>"; };
+		0FDF6B0E248635B500B6E216 /* ATComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATComment.swift; sourceTree = "<group>"; };
+		0FDF6B10248637DB00B6E216 /* ATCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCommentCell.swift; sourceTree = "<group>"; };
+		0FDF6B11248637DB00B6E216 /* ATCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCommentCell.xib; sourceTree = "<group>"; };
 		5B7E02532F0920F6365BBC3F /* Pods-ATCarToon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATCarToon.debug.xcconfig"; path = "Target Support Files/Pods-ATCarToon/Pods-ATCarToon.debug.xcconfig"; sourceTree = "<group>"; };
 		6A29F3C38888312A6D205485 /* Pods-ATCarToon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATCarToon.release.xcconfig"; path = "Target Support Files/Pods-ATCarToon/Pods-ATCarToon.release.xcconfig"; sourceTree = "<group>"; };
 		99502043002DDAF48A2BC716 /* Pods_ATCarToon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATCarToon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F2B437E2484F40B00895C05 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0F2B437F2484F43200895C05 /* ATDetailContoller.swift */,
+				0F9B3BBA2484F80E008CF556 /* ATCommentController.swift */,
+				0F9B3BBC2484F81F008CF556 /* ATChapterController.swift */,
+				0F9B3BBE2484F831008CF556 /* ATContentController.swift */,
+				0F9B3BC02484F957008CF556 /* ATDetailTopView.swift */,
+				0F9B3BC22484F961008CF556 /* ATDetailTopView.xib */,
+				0FDF6B0A248603A300B6E216 /* ATChapterCell.swift */,
+				0FDF6B0B248603A300B6E216 /* ATChapterCell.xib */,
+				0FDF6B10248637DB00B6E216 /* ATCommentCell.swift */,
+				0FDF6B11248637DB00B6E216 /* ATCommentCell.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		0F4522CF2480B87700E53BBF = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +189,7 @@
 		0F4522F32480BA1B00E53BBF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0F2B437E2484F40B00895C05 /* Detail */,
 				0F4523092480BF8600E53BBF /* Home */,
 			);
 			path = Class;
@@ -159,12 +213,12 @@
 			children = (
 				0F45231C2480EBB200E53BBF /* Cell */,
 				0F45231B2480EBB200E53BBF /* Model */,
-				0F45230A2480BF9B00E53BBF /* ATHomeController.swift */,
 				0F45230C2480D7D600E53BBF /* ATHomeContentController.swift */,
 				0F45230E2480D9BF00E53BBF /* ATHotController.swift */,
 				0F4523152480E77C00E53BBF /* ATVipController.swift */,
 				0F4523172480E78C00E53BBF /* ATRankController.swift */,
 				0F4523192480E96200E53BBF /* ATSubController.swift */,
+				0F2B43762484D27A00895C05 /* ATMoreController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -174,6 +228,7 @@
 			children = (
 				0F4523112480DC4000E53BBF /* ATMoya.swift */,
 				0F4523132480DF2E00E53BBF /* ATBaseMoya.swift */,
+				0F2B43782484D40600895C05 /* ATJump.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -183,6 +238,9 @@
 			children = (
 				0F4523212480ED1F00E53BBF /* ATRankModel.swift */,
 				0F4523232480F90400E53BBF /* ATHomeInfo.swift */,
+				0F45232D248117E300E53BBF /* ATHotModel.swift */,
+				0FDF6B082485FF9400B6E216 /* ATChapterItem.swift */,
+				0FDF6B0E248635B500B6E216 /* ATComment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +254,10 @@
 				0F4523262480FC2500E53BBF /* ATVipCell.xib */,
 				0F4523292481017200E53BBF /* ATVipReusableView.swift */,
 				0F45232A2481017200E53BBF /* ATVipReusableView.xib */,
+				0F2B4372248493B400895C05 /* ATHotCell.swift */,
+				0F2B4373248493B400895C05 /* ATHotCell.xib */,
+				0F2B437A2484DB6D00895C05 /* ATMoreCell.swift */,
+				0F2B437B2484DB6D00895C05 /* ATMoreCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -279,9 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4523202480EBC500E53BBF /* ATRankCell.xib in Resources */,
+				0F2B437D2484DB6D00895C05 /* ATMoreCell.xib in Resources */,
+				0FDF6B13248637DB00B6E216 /* ATCommentCell.xib in Resources */,
+				0F9B3BC32484F961008CF556 /* ATDetailTopView.xib in Resources */,
 				0F45232C2481017200E53BBF /* ATVipReusableView.xib in Resources */,
+				0F2B4375248493B400895C05 /* ATHotCell.xib in Resources */,
 				0F4522E82480B87900E53BBF /* LaunchScreen.storyboard in Resources */,
 				0F4523282480FC2500E53BBF /* ATVipCell.xib in Resources */,
+				0FDF6B0D248603A300B6E216 /* ATChapterCell.xib in Resources */,
 				0F4522E52480B87900E53BBF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,26 +403,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4523162480E77C00E53BBF /* ATVipController.swift in Sources */,
-				0F45230B2480BF9B00E53BBF /* ATHomeController.swift in Sources */,
 				0F4523082480BC9000E53BBF /* ATTabBarController.swift in Sources */,
+				0FDF6B12248637DB00B6E216 /* ATCommentCell.swift in Sources */,
 				0F45231A2480E96200E53BBF /* ATSubController.swift in Sources */,
+				0F45232E248117E300E53BBF /* ATHotModel.swift in Sources */,
+				0FDF6B092485FF9400B6E216 /* ATChapterItem.swift in Sources */,
+				0F2B43772484D27A00895C05 /* ATMoreController.swift in Sources */,
 				0F45232B2481017200E53BBF /* ATVipReusableView.swift in Sources */,
 				0F4523122480DC4000E53BBF /* ATMoya.swift in Sources */,
 				0F4523002480BB9700E53BBF /* BaseTableViewController.swift in Sources */,
 				0F4523182480E78C00E53BBF /* ATRankController.swift in Sources */,
+				0FDF6B0C248603A300B6E216 /* ATChapterCell.swift in Sources */,
+				0F2B43792484D40600895C05 /* ATJump.swift in Sources */,
 				0F4523012480BB9700E53BBF /* BaseConnectionController.swift in Sources */,
 				0F4523242480F90400E53BBF /* ATHomeInfo.swift in Sources */,
+				0F2B4374248493B400895C05 /* ATHotCell.swift in Sources */,
+				0F9B3BBB2484F80E008CF556 /* ATCommentController.swift in Sources */,
 				0F4522F62480BA1B00E53BBF /* AppDelegate.swift in Sources */,
 				0F4523272480FC2500E53BBF /* ATVipCell.swift in Sources */,
+				0F9B3BC12484F957008CF556 /* ATDetailTopView.swift in Sources */,
+				0F9B3BBD2484F81F008CF556 /* ATChapterController.swift in Sources */,
 				0F45230F2480D9BF00E53BBF /* ATHotController.swift in Sources */,
 				0F45230D2480D7D600E53BBF /* ATHomeContentController.swift in Sources */,
 				0F4522FD2480BB9700E53BBF /* BaseRefreshController.swift in Sources */,
+				0F2B437C2484DB6D00895C05 /* ATMoreCell.swift in Sources */,
 				0F4523222480ED1F00E53BBF /* ATRankModel.swift in Sources */,
+				0F9B3BBF2484F831008CF556 /* ATContentController.swift in Sources */,
 				0F4523022480BB9700E53BBF /* BaseViewController.swift in Sources */,
 				0F4522FF2480BB9700E53BBF /* BaseNavigationController.swift in Sources */,
+				0F2B43802484F43200895C05 /* ATDetailContoller.swift in Sources */,
 				0F4522FE2480BB9700E53BBF /* BaseMacro.swift in Sources */,
 				0F45231F2480EBC500E53BBF /* ATRankCell.swift in Sources */,
 				0F4523142480DF2E00E53BBF /* ATBaseMoya.swift in Sources */,
+				0FDF6B0F248635B500B6E216 /* ATComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

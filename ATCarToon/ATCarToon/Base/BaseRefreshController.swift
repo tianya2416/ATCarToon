@@ -93,12 +93,9 @@ extension BaseRefreshController : ATRefreshDataSource{
         return "数据加载中..."
     }
     var refreshErrorToast  : String {
-        return "数据空空如也..."
-    }
-    var refreshEmptyToast  : String {
         return "无网络连接,请检查网络设置"
     }
-    override func verticalOffset(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
-        return -NAVI_BAR_HIGHT/2;
+    var refreshEmptyToast  : String {
+        return "数据空空如也..."
     }
 }

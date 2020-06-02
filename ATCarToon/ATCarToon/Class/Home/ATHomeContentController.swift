@@ -37,14 +37,15 @@ class ATHomeContentController: UIViewController {
         ctrl.magicView.bounces = false;
         ctrl.magicView.isScrollEnabled = true;
         let sliderView = UIView.init();
-        sliderView.layer.cornerRadius = 5;
-        sliderView.layer.borderWidth = 1.5;
+        sliderView.layer.cornerRadius = AppRadius;
+        sliderView.layer.borderWidth = 1.25;
         sliderView.layer.borderColor = AppColor.cgColor;
         ctrl.magicView.setSlider(sliderView)
         return ctrl;
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.fd_prefersNavigationBarHidden = true;
         self.view.addSubview(self.magicCtrl.view);
         self.magicCtrl.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview();
@@ -59,13 +60,10 @@ extension ATHomeContentController : VTMagicViewDataSource,VTMagicViewDelegate{
         return ["热门","VIP","订阅","排行榜"];
     }
     func magicView(_ magicView: VTMagicView, menuItemAt itemIndex: UInt) -> UIButton {
-        var button : UIButton! = magicView.dequeueReusableItem(withIdentifier: "www.new.btn.identy");
-        if button == nil {
-            button = UIButton.init(type: .custom);
-            button.setTitleColor(Appx333333, for: .normal);
-            button.setTitleColor(AppColor, for: .selected);
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16);
-        }
+        let button : UIButton = magicView.dequeueReusableItem(withIdentifier: "www.new.btn.identy") ?? UIButton.init();
+        button.setTitleColor(Appx333333, for: .normal);
+        button.setTitleColor(AppColor, for: .selected);
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16);
         return button;
     }
     func magicView(_ magicView: VTMagicView, viewControllerAtPage pageIndex: UInt) -> UIViewController {

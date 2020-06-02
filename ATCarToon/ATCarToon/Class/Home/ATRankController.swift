@@ -49,8 +49,11 @@ class ATRankController: BaseTableViewController {
         cell.model = self.listData[indexPath.row];
         return cell;
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true);
+        let info = self.listData[indexPath.row]
+        let title = info.title! + "榜"
+        ATJump.jumpToMoreCtrl(argCon: info.argCon, argName: info.argName!, argValue: info.argValue!,title:title )
     }
 }
 
