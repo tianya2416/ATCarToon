@@ -20,7 +20,7 @@ class ATChapterCell: UICollectionViewCell {
         
         self.mainView.layer.shadowColor = Appx000000.cgColor
         self.mainView.layer.shadowOffset = CGSize.zero; //设置偏移量为0,四周都有阴影
-        self.mainView.layer.shadowRadius = 8.0//阴影半径，默认3
+        self.mainView.layer.shadowRadius = 5.0//阴影半径，默认3
         self.mainView.layer.shadowOpacity = 0.06//阴影透明度，默认0
             //[UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.layer.cornerRadius].CGPath;
         // Initialization code

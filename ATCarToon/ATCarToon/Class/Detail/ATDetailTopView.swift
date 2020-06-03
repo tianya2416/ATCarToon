@@ -24,7 +24,25 @@ class ATDetailTopView: UIView {
         self.imageV.layer.borderWidth = 1
         self.imageV.layer.borderColor = Appxffffff.cgColor
     }
-    var info : ATDetailInfo = ATDetailInfo(){
+    var item :ATHomeItem = ATHomeItem(){
+        didSet{
+            let model = item
+            self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)
+            self.titleLab.text = model.name ?? ""
+            self.mainView.kf.setImage(with: URL.init(string: model.cover!), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
+                switch result{
+                case .success(let value):
+                    self.mainView.image = value.image.kf.blurred(withRadius: 25)
+                    break
+                    
+                case .failure( _):
+                
+                    break
+                }
+            }
+        }
+    }
+    var info :ATDetailInfo = ATDetailInfo(){
         didSet{
             let model = info
             self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)

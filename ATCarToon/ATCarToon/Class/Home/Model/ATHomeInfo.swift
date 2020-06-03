@@ -35,10 +35,12 @@ class ATHomeItem: HandyJSON {
     var name       : String?   = "";
     var author_name: String?   = "";
     var cover      : String?   = "";
+    var ori_cover  : String?   = "";
     var short_description: String?   = "";
     var subTitle   : String?   = "";
     var tags       : [String]? = []
     var content    : String?   = "";
+    var new_comic  : Bool?     = false;
     
     func mapping(mapper: HelpingMapper) {
         mapper <<<
@@ -47,6 +49,10 @@ class ATHomeItem: HandyJSON {
             self.tags <-- ["tags","theme_ids"]
         mapper <<<
             self.conTag <-- ["conTag","last_update_time"]
+        mapper <<<
+            self.cover <-- ["cover","coverUrl"]
+        mapper <<<
+            self.ori_cover <-- ["ori","ori_cover"]
     }
     required init() {
         
@@ -83,7 +89,6 @@ class ATTags : HandyJSON{
 
 class ATDetailInfo : ATHomeItem{
     var thread_id      : String?     = "";
-    var ori            : String?     = "";
     var level          : String?     = "";
     var wideCover      : String?     = "";
     var comic_color    : String?     = "";

@@ -31,6 +31,29 @@ class ATVipReusableView: UICollectionReusableView {
     }
     
 }
+class ATDetailReusableView: UICollectionReusableView{
+    lazy var titleLal : UILabel = {
+        var lab = UILabel.init()
+        lab.font = UIFont.systemFont(ofSize: 16)
+        lab.textColor = Appx333333
+        return lab
+    }()
+    override init(frame: CGRect) {
+        super.init(frame:frame);
+        loadUI();
+    }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder);
+        loadUI();
+    }
+    func loadUI(){
+        self.addSubview(self.titleLal)
+        self.titleLal.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(8);
+            make.centerY.equalToSuperview()
+        }
+    }
+}
 class ATHotReusableView: UICollectionReusableView{
     lazy var pageView: SDCycleScrollView = {
         let pageView : SDCycleScrollView = SDCycleScrollView.init(frame: CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_WIDTH/16*7.0), delegate:self, placeholderImage: placeholder);
@@ -74,6 +97,7 @@ class ATHotReusableView: UICollectionReusableView{
 }
 extension ATHotReusableView : SDCycleScrollViewDelegate{
     func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
-        
+        let item :ATBannerItem = self.listData[index]
+        ATJump.jumpToDetailCtrl(comicId: item.id!)
     }
 }

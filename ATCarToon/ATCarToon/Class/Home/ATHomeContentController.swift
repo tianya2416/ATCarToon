@@ -14,7 +14,7 @@ class ATHomeContentController: UIViewController {
     }()
     lazy var magicCtrl : VTMagicController = {
         let ctrl = VTMagicController.init();
-        ctrl.magicView.navigationInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5);
+        ctrl.magicView.navigationInset = UIEdgeInsets(top:STATUS_BAR_HIGHT, left: 5, bottom: 0, right: 5);
         ctrl.magicView.separatorHeight = 0.5;
         ctrl.magicView.backgroundColor = Appxffffff
         ctrl.magicView.separatorColor = UIColor.clear;
@@ -26,10 +26,10 @@ class ATHomeContentController: UIViewController {
         ctrl.magicView.layoutStyle = .default;
         ctrl.magicView.sliderStyle = .bubble;
         ctrl.magicView.bubbleInset = UIEdgeInsets.init(top: 3, left: 8, bottom: 3, right: 8)
-        ctrl.magicView.navigationHeight = 44;
+        ctrl.magicView.navigationHeight = 44 + STATUS_BAR_HIGHT;
         ctrl.magicView.itemSpacing = 25;
         
-        ctrl.magicView.isAgainstStatusBar = true;
+        ctrl.magicView.isAgainstStatusBar = false;
         ctrl.magicView.dataSource = self;
         ctrl.magicView.delegate = self;
         ctrl.magicView.itemScale = 1.05;

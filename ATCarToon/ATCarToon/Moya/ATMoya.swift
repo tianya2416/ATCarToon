@@ -19,6 +19,7 @@ public enum ATMoya{
     case apiDetail(comicid:String)
     case apiDetailReal(comicid:String)
     case apiComment(comicId: String, thread_id: String,page: Int)
+    case apiGuessLike
 }
 extension ATMoya : TargetType{
     public static func apiMoya(target: ATMoya,sucesss:@escaping ((_ object : JSON) ->()),failure:@escaping ((_ error : String) ->())){
@@ -60,6 +61,8 @@ extension ATMoya : TargetType{
             return "comic/detail_realtime"
         case .apiComment:
             return "comment/list"
+        case .apiGuessLike:
+            return "comic/guessLike"
         }
     }
     public var task: Task {

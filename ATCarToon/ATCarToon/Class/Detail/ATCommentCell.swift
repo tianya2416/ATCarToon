@@ -20,7 +20,7 @@ class ATCommentCell: UITableViewCell {
             let model = item
             self.imageV.kf.setImage(with: URL.init(string: model.face!),placeholder: placeholder)
             self.titleLab.text = model.nickname ?? ""
-            self.subTitleLab.text = model.sex ?? "保密"
+            self.subTitleLab.text = model.sex!.count > 0 ? model.sex : "保密"
             
             let content : String = model.content ?? ""
             let att = NSMutableAttributedString.init(string: content)

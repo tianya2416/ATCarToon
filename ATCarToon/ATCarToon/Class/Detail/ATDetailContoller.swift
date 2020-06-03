@@ -11,12 +11,9 @@ let Detail_Height : CGFloat = CGFloat(150)
 class ATDetailContoller: YNPageViewController,YNPageViewControllerDelegate,YNPageViewControllerDataSource {
     
     var comicId :String? = ""
-    var info    :ATDetailInfo? = ATDetailInfo();
-    convenience init(comicId :String) {
-        self.init()
-        self.comicId = comicId
-    }
-    class func vcWithBookId(comicId:String) -> Self{
+    var item    :ATHomeItem? = nil
+    var info    :ATDetailInfo? = ATDetailInfo()
+    class func vcWithBookId(comicId:String,item :ATHomeItem? = nil) -> Self{
         let config = YNPageConfigration.defaultConfig()
         config?.headerViewCouldScale = true
         config?.scrollMenu = true
@@ -39,6 +36,7 @@ class ATDetailContoller: YNPageViewController,YNPageViewControllerDelegate,YNPag
         vc.dataSource = vc
         vc.headerView = vc.topView
         vc.comicId = comicId
+        vc.item = item ?? ATHomeItem()
         return vc as! Self
     }
     private lazy var topView : ATDetailTopView = {
@@ -50,10 +48,11 @@ class ATDetailContoller: YNPageViewController,YNPageViewControllerDelegate,YNPag
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fd_prefersNavigationBarHidden = true
+        self.topView.item = self.item!;
         loadData()
     }
     func loadData(){
-        ATMoya.apiMoya(target: .apiDetail(comicid: self.comicId!), sucesss: { (json) in
+        ATMoya.apiMoya(target:.apiDetail(comicid: self.comicId!), sucesss: { (json) in
             print(json)
             if let model = ATDetailInfo.deserialize(from: json["comic"].rawString()){
                 self.info = model;

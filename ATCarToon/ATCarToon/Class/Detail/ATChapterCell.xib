@@ -10,17 +10,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="ATChapterCell" customModule="ATCarToon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="88"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="131"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="330" height="88"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="131"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEq-dQ-pQf">
-                        <rect key="frame" x="8" y="8" width="314" height="72"/>
+                        <rect key="frame" x="7" y="7" width="316" height="117"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOx-n6-99Q">
-                                <rect key="frame" x="5" y="27.5" width="304" height="17"/>
+                                <rect key="frame" x="8" y="50" width="308" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -29,24 +29,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WOx-n6-99Q" firstAttribute="centerY" secondItem="dEq-dQ-pQf" secondAttribute="centerY" id="8en-4N-r4v"/>
-                            <constraint firstAttribute="trailing" secondItem="WOx-n6-99Q" secondAttribute="trailing" constant="5" id="avQ-GZ-9SI"/>
-                            <constraint firstItem="WOx-n6-99Q" firstAttribute="leading" secondItem="dEq-dQ-pQf" secondAttribute="leading" constant="5" id="sTR-bG-tB2"/>
+                            <constraint firstAttribute="trailing" secondItem="WOx-n6-99Q" secondAttribute="trailing" id="avQ-GZ-9SI"/>
+                            <constraint firstItem="WOx-n6-99Q" firstAttribute="leading" secondItem="dEq-dQ-pQf" secondAttribute="leading" constant="8" id="sTR-bG-tB2"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="dEq-dQ-pQf" secondAttribute="bottom" constant="8" id="GaT-N4-la4"/>
-                <constraint firstItem="dEq-dQ-pQf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Qd5-pb-eRb"/>
-                <constraint firstAttribute="trailing" secondItem="dEq-dQ-pQf" secondAttribute="trailing" constant="8" id="V3U-NH-bVg"/>
-                <constraint firstItem="dEq-dQ-pQf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="sD7-Uw-mSx"/>
+                <constraint firstAttribute="bottom" secondItem="dEq-dQ-pQf" secondAttribute="bottom" constant="7" id="GaT-N4-la4"/>
+                <constraint firstItem="dEq-dQ-pQf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="Qd5-pb-eRb"/>
+                <constraint firstAttribute="trailing" secondItem="dEq-dQ-pQf" secondAttribute="trailing" constant="7" id="V3U-NH-bVg"/>
+                <constraint firstItem="dEq-dQ-pQf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="sD7-Uw-mSx"/>
             </constraints>
-            <size key="customSize" width="330" height="88"/>
+            <size key="customSize" width="330" height="131"/>
             <connections>
                 <outlet property="mainView" destination="dEq-dQ-pQf" id="qLF-3U-1sE"/>
                 <outlet property="titleLab" destination="WOx-n6-99Q" id="Cbq-AW-7Ou"/>
             </connections>
-            <point key="canvasLocation" x="340.57971014492756" y="118.52678571428571"/>
+            <point key="canvasLocation" x="340.57971014492756" y="132.92410714285714"/>
         </collectionViewCell>
     </objects>
 </document>
