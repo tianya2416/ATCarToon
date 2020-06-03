@@ -15,10 +15,16 @@ class ATJump: NSObject {
         let nvc = UIViewController.rootTopPresentedController()
         nvc.navigationController?.pushViewController(vc, animated: true);
     }
-    class func jumpToDetailCtrl(comicId :String){
-        let vc = ATDetailContoller.vcWithBookId(comicId: comicId);
+    class func jumpToDetailCtrl(comicId :String,item :ATHomeItem? = nil){
+        let vc = ATDetailContoller.vcWithBookId(comicId: comicId,item: item);
         vc.hidesBottomBarWhenPushed = true
         let nvc = UIViewController.rootTopPresentedController()
         nvc.navigationController?.pushViewController(vc, animated: true);
+    }
+    class func jumpToSearchCtrl(){
+        let vc = ATSearchController()
+        vc.hidesBottomBarWhenPushed = true
+        let nvc = UIViewController.rootTopPresentedController()
+        nvc.navigationController?.pushViewController(vc, animated: false);
     }
 }

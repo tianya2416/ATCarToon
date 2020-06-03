@@ -45,6 +45,7 @@
 		0F9B3BBF2484F831008CF556 /* ATContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BBE2484F831008CF556 /* ATContentController.swift */; };
 		0F9B3BC12484F957008CF556 /* ATDetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B3BC02484F957008CF556 /* ATDetailTopView.swift */; };
 		0F9B3BC32484F961008CF556 /* ATDetailTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9B3BC22484F961008CF556 /* ATDetailTopView.xib */; };
+		0FB8E3B524879C0300C28268 /* ATSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB8E3B424879C0300C28268 /* ATSearchController.swift */; };
 		0FDF6B092485FF9400B6E216 /* ATChapterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B082485FF9400B6E216 /* ATChapterItem.swift */; };
 		0FDF6B0C248603A300B6E216 /* ATChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF6B0A248603A300B6E216 /* ATChapterCell.swift */; };
 		0FDF6B0D248603A300B6E216 /* ATChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FDF6B0B248603A300B6E216 /* ATChapterCell.xib */; };
@@ -96,6 +97,7 @@
 		0F9B3BBE2484F831008CF556 /* ATContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATContentController.swift; sourceTree = "<group>"; };
 		0F9B3BC02484F957008CF556 /* ATDetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDetailTopView.swift; sourceTree = "<group>"; };
 		0F9B3BC22484F961008CF556 /* ATDetailTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATDetailTopView.xib; sourceTree = "<group>"; };
+		0FB8E3B424879C0300C28268 /* ATSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATSearchController.swift; sourceTree = "<group>"; };
 		0FDF6B082485FF9400B6E216 /* ATChapterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChapterItem.swift; sourceTree = "<group>"; };
 		0FDF6B0A248603A300B6E216 /* ATChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChapterCell.swift; sourceTree = "<group>"; };
 		0FDF6B0B248603A300B6E216 /* ATChapterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATChapterCell.xib; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		0F4522F32480BA1B00E53BBF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0FB8E3B324879BDF00C28268 /* Search */,
 				0F2B437E2484F40B00895C05 /* Detail */,
 				0F4523092480BF8600E53BBF /* Home */,
 			);
@@ -260,6 +263,14 @@
 				0F2B437B2484DB6D00895C05 /* ATMoreCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0FB8E3B324879BDF00C28268 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0FB8E3B424879C0300C28268 /* ATSearchController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		8AE4B6D2E30217A568BD03D5 /* Pods */ = {
@@ -410,6 +421,7 @@
 				0FDF6B092485FF9400B6E216 /* ATChapterItem.swift in Sources */,
 				0F2B43772484D27A00895C05 /* ATMoreController.swift in Sources */,
 				0F45232B2481017200E53BBF /* ATVipReusableView.swift in Sources */,
+				0FB8E3B524879C0300C28268 /* ATSearchController.swift in Sources */,
 				0F4523122480DC4000E53BBF /* ATMoya.swift in Sources */,
 				0F4523002480BB9700E53BBF /* BaseTableViewController.swift in Sources */,
 				0F4523182480E78C00E53BBF /* ATRankController.swift in Sources */,
@@ -574,6 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89S2H4PPVL;
 				INFOPLIST_FILE = ATCarToon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89S2H4PPVL;
 				INFOPLIST_FILE = ATCarToon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,7 +17,7 @@ class ATHotController: BaseConnectionController {
         self.setupRefresh(scrollView: self.collectionView, options: .defaults);
     }
     override func refreshData(page: Int) {
-        ATMoya.apiMoya(target: .apiHot(sexType: 1), sucesss: { (json) in
+        ATMoya.apiMoya(target: .apiHot(sexType:5), sucesss: { (json) in
             if let model = ATHotModel.deserialize(from: json.rawString()){
                 self.model = model;
             }
@@ -57,8 +57,11 @@ class ATHotController: BaseConnectionController {
         if  info is ATHomeInfo {
             let home : ATHomeInfo = info as! ATHomeInfo;
             return CGSize.init(width: SCREEN_WIDTH, height: home.listData.count > 0 ? 30 : 0.001);
+        }else if info is [Any]{
+            let home : [ATBannerItem] = info as! [ATBannerItem];
+            return CGSize.init(width: SCREEN_WIDTH, height: home.count == 0 ? 0.0001 : SCREEN_WIDTH/16*7.0);
         }
-        return CGSize.init(width: SCREEN_WIDTH, height: SCREEN_WIDTH/16*7.0);
+        return CGSize.init(width: SCREEN_WIDTH, height: 0.001);
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let info = self.model.listData[indexPath.section];
@@ -70,9 +73,12 @@ class ATHotController: BaseConnectionController {
             vip.rightBtn.isHidden = false
             return vip;
         }
-        let hot = ATHotReusableView.viewForCollectionView(collectionView: collectionView, elementKind: kind, indexPath: indexPath);
-        hot.listData = info as! [ATBannerItem];
-        return hot;
+        else if info is [Any]{
+            let hot = ATHotReusableView.viewForCollectionView(collectionView: collectionView, elementKind: kind, indexPath: indexPath);
+            hot.listData = info as! [ATBannerItem];
+            return hot;
+        }
+        return UICollectionReusableView.viewForCollectionView(collectionView: collectionView, elementKind: kind, indexPath: indexPath)
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let info = self.model.listData[indexPath.section];
@@ -88,7 +94,7 @@ class ATHotController: BaseConnectionController {
         let info = self.model.listData[indexPath.section];
         if  info is ATHomeInfo {
             let home : ATHomeInfo = info as! ATHomeInfo;
-            ATJump.jumpToDetailCtrl(comicId:home.listData[indexPath.row].comicId!)
+            ATJump.jumpToDetailCtrl(comicId:home.listData[indexPath.row].comicId!,item:home.listData[indexPath.row])
         }
     }
 }

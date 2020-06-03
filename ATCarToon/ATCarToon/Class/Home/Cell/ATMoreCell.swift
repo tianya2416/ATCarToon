@@ -26,15 +26,15 @@ class ATMoreCell: UITableViewCell {
             let par = NSMutableParagraphStyle.init()
             par.lineSpacing = 4
             par.lineBreakMode = .byTruncatingTail
-//            par.paragraphSpacing = 4;
+
             att.addAttributes([NSAttributedString.Key.paragraphStyle : par],range:NSRange.init(location: 0, length: content.count))
             self.subTitleLab.attributedText = att
             var subTitle : String = ""
             for object in model.tags! {
                 subTitle = subTitle + object + " "
             }
-            self.tagLab.text = subTitle
-            self.timeLab.text = model.conTag == 0 ?  model.short_description : self.timeStampTunrnToDate(timeStamp: model.conTag!)
+            self.tagLab.text = model.last_update_time == 0 ?  model.author_name : self.timeStampTunrnToDate(timeStamp: TimeInterval(model.last_update_time!))
+            self.timeLab.text = subTitle
         }
 
     }

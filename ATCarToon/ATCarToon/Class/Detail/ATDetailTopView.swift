@@ -18,7 +18,7 @@ class ATDetailTopView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.top.constant = STATUS_BAR_HIGHT
+        self.top.constant = App_Status_Bar
         self.mainView.image = placeholder.kf.blurred(withRadius: 25)
         self.imageV.layer.masksToBounds = true
         self.imageV.layer.borderWidth = 1
@@ -27,39 +27,65 @@ class ATDetailTopView: UIView {
     var item :ATHomeItem = ATHomeItem(){
         didSet{
             let model = item
-            self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)
             self.titleLab.text = model.name ?? ""
-            self.mainView.kf.setImage(with: URL.init(string: model.cover!), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
-                switch result{
-                case .success(let value):
-                    self.mainView.image = value.image.kf.blurred(withRadius: 25)
-                    break
-                    
-                case .failure( _):
-                
-                    break
-                }
-            }
+            self.setContent(content: model.content ?? "")
+            self.setImageUrl(url: model.cover ?? "")
         }
     }
     var info :ATDetailInfo = ATDetailInfo(){
         didSet{
             let model = info
-            self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)
-            self.titleLab.text = model.name ?? ""
-            self.subTitleLab.text = model.content ?? ""
-            self.mainView.kf.setImage(with: URL.init(string: model.cover!), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
-                switch result{
-                case .success(let value):
-                    self.mainView.image = value.image.kf.blurred(withRadius: 25)
-                    break
-                    
-                case .failure( _):
-                
-                    break
+            var firstLab : UIButton? = nil
+            for object in model.tags! {
+                let label : UIButton = UIButton.init()
+                label.contentEdgeInsets  = UIEdgeInsets.init(top: 3, left: 6, bottom: 3, right: 6)
+                label.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+                label.setTitleColor(Appxffffff, for: .normal)
+                label.setTitle(object, for: .normal)
+                label.layer.masksToBounds = true
+                label.layer.cornerRadius = AppRadius
+                label.layer.borderWidth = 0.6
+                label.layer.borderColor = Appxffffff.cgColor
+                label.isUserInteractionEnabled = false
+                self.addSubview(label)
+                if firstLab != nil {
+                    label.snp.makeConstraints { (make) in
+                        make.centerY.equalTo(firstLab!)
+                        make.left.equalTo(firstLab!.snp.right).offset(10)
+                    }
+                }else{
+                    label.snp.makeConstraints { (make) in
+                        make.left.equalTo(self.titleLab)
+                        make.top.equalTo(self.subTitleLab.snp.bottom).offset(8)
+                    }
                 }
+                firstLab = label
+            }
+            self.titleLab.text = model.name ?? ""
+            self.setContent(content: model.content ?? "")
+            self.setImageUrl(url: model.cover ?? "")
+        }
+    }
+    func setContent(content : String){
+        let att = NSMutableAttributedString.init(string: content)
+        let par = NSMutableParagraphStyle.init()
+        par.lineSpacing = 4
+        par.lineBreakMode = .byTruncatingTail
+        att.addAttributes([NSAttributedString.Key.paragraphStyle : par],range:NSRange.init(location: 0, length: content.count))
+        self.subTitleLab.attributedText = att
+    }
+    func setImageUrl(url :String){
+        self.imageV.kf.setImage(with: URL.init(string: url ),placeholder: placeholder)
+        self.mainView.kf.setImage(with: URL.init(string: url ), placeholder: placeholder, options: nil, progressBlock: nil) { (result) in
+            switch result{
+            case .success(let value):
+                self.mainView.image = value.image.kf.blurred(withRadius: 25)
+                break
+                
+            case .failure( _):
+            
+                break
             }
         }
     }
-
 }

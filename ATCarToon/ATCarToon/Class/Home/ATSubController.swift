@@ -72,4 +72,9 @@ class ATSubController: BaseConnectionController {
         cell.item = info.comics![indexPath.row];
         return cell;
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let info : ATHomeInfo = self.listData[indexPath.section]
+        let item : ATHomeItem = info.comics![indexPath.row]
+        ATJump.jumpToDetailCtrl(comicId: item.comicId!, item: item)
+    }
 }

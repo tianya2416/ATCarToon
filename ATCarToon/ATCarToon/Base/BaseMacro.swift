@@ -17,10 +17,10 @@ let kAppdelegate  : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
 let SCREEN_WIDTH  :CGFloat  = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT :CGFloat  = UIScreen.main.bounds.size.height
 
-let iPhoneX        : Bool       = (ATMacro.iPhoneX());
-let STATUS_BAR_HIGHT:CGFloat    = (ATMacro.Status_Bar())//状态栏
-let NAVI_BAR_HIGHT  :CGFloat    = (ATMacro.Navi_Bar())//导航栏
-let TAB_BAR_ADDING  :CGFloat    = (ATMacro.Tab_Bar())//iphoneX斜刘海
+let iPhoneX        : Bool      = (ATMacro.iPhoneX());
+let App_Status_Bar :CGFloat    = (ATMacro.Status_Bar())//状态栏
+let App_Navi_Bar   :CGFloat    = (ATMacro.Navi_Bar())//导航栏
+let App_Tab_Bar    :CGFloat    = (ATMacro.Tab_Bar())//iphoneX斜刘海
 
 let AppColor     :UIColor = UIColor.init(hex:"007EFE")
 let Appxdddddd   :UIColor = UIColor.init(hex:"dddddd")

@@ -9,27 +9,32 @@
 import UIKit
 
 class ATHomeContentController: UIViewController {
+    private lazy var searchBtn : UIButton = {
+        let btn : UIButton = UIButton.init();
+        btn.frame = CGRect.init(x: 0, y: 0, width: 44, height: 44);
+        btn.setImage(UIImage.init(named: "icon_home_search"), for: .normal);
+        btn.addTarget(self, action: #selector(searchAction), for: .touchUpInside)
+        return btn;
+    }()
     lazy var contollers : [UIViewController] = {
         return [ATHotController(),ATVipController(),ATSubController(),ATRankController()];
     }()
     lazy var magicCtrl : VTMagicController = {
         let ctrl = VTMagicController.init();
-        ctrl.magicView.navigationInset = UIEdgeInsets(top:STATUS_BAR_HIGHT, left: 5, bottom: 0, right: 5);
-        ctrl.magicView.separatorHeight = 0.5;
+        ctrl.magicView.navigationInset = UIEdgeInsets(top:0, left: 5, bottom: 0, right: 5)
+        ctrl.magicView.separatorHeight = 0.5
         ctrl.magicView.backgroundColor = Appxffffff
         ctrl.magicView.separatorColor = UIColor.clear;
         ctrl.magicView.navigationColor = Appxffffff;
         ctrl.magicView.switchStyle = .default;
-        
         ctrl.magicView.sliderColor = Appxffffff;
         
         ctrl.magicView.layoutStyle = .default;
         ctrl.magicView.sliderStyle = .bubble;
         ctrl.magicView.bubbleInset = UIEdgeInsets.init(top: 3, left: 8, bottom: 3, right: 8)
-        ctrl.magicView.navigationHeight = 44 + STATUS_BAR_HIGHT;
+        ctrl.magicView.navigationHeight = 44;
         ctrl.magicView.itemSpacing = 25;
-        
-        ctrl.magicView.isAgainstStatusBar = false;
+        ctrl.magicView.isAgainstStatusBar = true;
         ctrl.magicView.dataSource = self;
         ctrl.magicView.delegate = self;
         ctrl.magicView.itemScale = 1.05;
@@ -51,9 +56,13 @@ class ATHomeContentController: UIViewController {
             make.edges.equalToSuperview();
         }
         self.magicCtrl.magicView.reloadData();
+        self.magicCtrl.magicView.rightNavigatoinItem = self.searchBtn
+        self.magicCtrl.magicView.rightNavigatoinItem?.frame = CGRect.init(x: 0, y: App_Status_Bar, width: 50, height: 44)
         // Do any additional setup after loading the view.
     }
-
+    @objc func searchAction(){
+        ATJump.jumpToSearchCtrl()
+    }
 }
 extension ATHomeContentController : VTMagicViewDataSource,VTMagicViewDelegate{
     func menuTitles(for magicView: VTMagicView) -> [String] {
@@ -69,6 +78,4 @@ extension ATHomeContentController : VTMagicViewDataSource,VTMagicViewDelegate{
     func magicView(_ magicView: VTMagicView, viewControllerAtPage pageIndex: UInt) -> UIViewController {
         return self.contollers[Int(pageIndex)];
     }
-    
-    
 }

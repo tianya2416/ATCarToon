@@ -98,6 +98,6 @@ class ATHotReusableView: UICollectionReusableView{
 extension ATHotReusableView : SDCycleScrollViewDelegate{
     func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
         let item :ATBannerItem = self.listData[index]
-        ATJump.jumpToDetailCtrl(comicId: item.id!)
+        ATJump.jumpToDetailCtrl(comicId: (item.ext?.first!["val"])!)
     }
 }

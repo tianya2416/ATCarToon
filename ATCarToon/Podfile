@@ -18,7 +18,7 @@ target 'ATCarToon' do
   pod 'MBProgressHUD',:git => 'https://github.com/tianya2416/MBProgress.git'
   pod 'FDFullscreenPopGesture', '1.1'
   pod 'KLRecycleScrollView'
-  pod 'VTMagic','~> 1.2.4'
+  pod 'VTMagic',:git => 'https://github.com/tianya2416/VTMagicMacro.git'
   pod 'FMDB'
   pod 'YNPageViewController'
   pod 'SDCycleScrollView'

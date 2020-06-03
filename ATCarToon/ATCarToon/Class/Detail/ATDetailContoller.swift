@@ -29,7 +29,7 @@ class ATDetailContoller: YNPageViewController,YNPageViewControllerDelegate,YNPag
         config?.itemMargin = 40
         config?.lineColor = AppColor
         config?.normalItemColor = Appx333333
-        config?.suspenOffsetY = STATUS_BAR_HIGHT
+        config?.suspenOffsetY = App_Status_Bar
         config?.lineWidthEqualFontWidth = true
         let vc :ATDetailContoller = ATDetailContoller.init(controllers: [ATContentController(comicId:comicId)], titles: ["详情"], config: config)
         vc.delegate = vc
@@ -41,7 +41,7 @@ class ATDetailContoller: YNPageViewController,YNPageViewControllerDelegate,YNPag
     }
     private lazy var topView : ATDetailTopView = {
         let topView :ATDetailTopView = ATDetailTopView.instanceView() 
-        topView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: Detail_Height + NAVI_BAR_HIGHT);
+        topView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: Detail_Height + App_Navi_Bar);
         topView.backBtn.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         return topView
     }()

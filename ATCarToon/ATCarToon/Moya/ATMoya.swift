@@ -31,7 +31,7 @@ extension ATMoya : TargetType{
             case let .success(respond):
                 let json = JSON(respond.data)
                 let jsonData = json["data"];
-                if jsonData["stateCode"] == 1 {
+                if jsonData["stateCode"] == 1 || jsonData["stateCode"] == 0{
                     sucesss(jsonData["returnData"]);
                 }else{
                     failure("code != 1")

@@ -22,15 +22,18 @@ class ATHomeInfo: HandyJSON {
     var comics       :[ATHomeItem]? = [];
     var listData     :[ATHomeItem] {
         get{
-            return (self.comics!.count < 4 ? self.comics : self.comics?.suffix(4) )!;
+            return (self.comics!.count < 4 ? self.comics! : [] + self.comics!.prefix(4))
+//            return (self.comics!.count < 4 ? self.comics : self.comics?.suffix(4) )!;
         }
+        
     }
     required init() {
         
     }
 }
 class ATHomeItem: HandyJSON {
-    var conTag     : TimeInterval? = 0;
+    var conTag     : Int? = 0;
+    var last_update_time: TimeInterval? = 0;
     var comicId    : String?   = "";
     var name       : String?   = "";
     var author_name: String?   = "";
@@ -53,6 +56,8 @@ class ATHomeItem: HandyJSON {
             self.cover <-- ["cover","coverUrl"]
         mapper <<<
             self.ori_cover <-- ["ori","ori_cover"]
+        mapper <<<
+            self.author_name <-- ["author","author_name"]
     }
     required init() {
         
@@ -64,7 +69,7 @@ class ATBannerItem : HandyJSON{
     var cover      : String?   = "";
     var id         : String?   = "";
     var linkType   : String?   = "";
-    var ext        :[String:String]? = [:];
+    var ext        :[[String:String]]? = [];
     required init() {
     }
 }
@@ -92,6 +97,13 @@ class ATDetailInfo : ATHomeItem{
     var level          : String?     = "";
     var wideCover      : String?     = "";
     var comic_color    : String?     = "";
-    var author   : ATUser?     = ATUser();
-    var classifyTags:[ATTags]? = [];
+    var author         : ATUser?     = ATUser();
+    var classifyTags   :[ATTags]? = [];
+    override var author_name: String?{
+        get{
+            return self.author?.name
+        }set{
+            
+        }
+    }
 }
