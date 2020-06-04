@@ -9,9 +9,9 @@
 import UIKit
 
 class ATMoreController: BaseTableViewController {
-    var argCon :Int?  = 0
-    var argName:String? = ""
-    var argValue:Int? = 0
+    var argCon :Int       = 0
+    var argValue:Int      = 0
+    var argName:String?   = ""
     var titleName:String? = ""
     lazy var listData : [ATHomeItem] = {
         return []
@@ -31,7 +31,10 @@ class ATMoreController: BaseTableViewController {
         // Do any additional setup after loading the view.
     }
     override func refreshData(page: Int) {
-        ATMoya.apiMoya(target: .apiComicList(argCon: self.argCon!, argName: self.argName!, argValue: self.argValue!, page:page), sucesss: { (json) in
+        ATMoya.apiMoya(target: .apiComicList(argCon: self.argCon, argName: self.argName!, argValue: self.argValue, page:page), sucesss: { (json) in
+            if page == RefreshPageStart{
+                self.listData.removeAll()
+            }
             var datas : [ATHomeItem] = [];
             if let listData = [ATHomeItem].deserialize(from:json["comics"].rawString()){
                 datas = listData as! [ATHomeItem]

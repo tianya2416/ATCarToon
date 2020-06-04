@@ -16,7 +16,7 @@ class ATHomeInfo: HandyJSON {
     var argCon      :Int?    = 0
     var argName     :String? = "";
     var argValue    :Int?    = 0;
-    var titleIconUrl  :String? = "";
+    var titleIconUrl   :String? = "";
     var newTitleIconUrl:String? = "";
     
     var comics       :[ATHomeItem]? = [];
@@ -32,28 +32,28 @@ class ATHomeInfo: HandyJSON {
     }
 }
 class ATHomeItem: HandyJSON {
+    var name       : String?;
+    var subTitle   : String?;
+    var content    : String?;
     var conTag     : Int? = 0;
     var last_update_time: TimeInterval? = 0;
-    var comicId    : String?   = "";
-    var name       : String?   = "";
-    var author_name: String?   = "";
-    var cover      : String?   = "";
-    var ori_cover  : String?   = "";
-    var short_description: String?   = "";
-    var subTitle   : String?   = "";
+    var comicId    : String? = ""
+    var author_name: String? = ""
+    var cover      : String? = ""
+    var ori_cover  : String? = ""
+    var short_description: String?
     var tags       : [String]? = []
-    var content    : String?   = "";
     var new_comic  : Bool?     = false;
     
     func mapping(mapper: HelpingMapper) {
         mapper <<<
             self.content <-- ["content","description"]
         mapper <<<
-            self.tags <-- ["tags","theme_ids"]
+            self.tags   <-- ["tags","theme_ids"]
         mapper <<<
             self.conTag <-- ["conTag","last_update_time"]
         mapper <<<
-            self.cover <-- ["cover","coverUrl"]
+            self.cover  <-- ["cover","coverUrl"]
         mapper <<<
             self.ori_cover <-- ["ori","ori_cover"]
         mapper <<<

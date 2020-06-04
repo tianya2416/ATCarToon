@@ -13,7 +13,7 @@ class ATChapterItem:  HandyJSON{
     var name             : String? = "";
     var has_locked_image : String? = "";
     var price            : String? = "";
-    var chapter_id       : String = ""
+    var chapter_id       : String  = ""
     var image_total      : Int?    = 0;
     var countImHightArr  : Int?    = 0;
     var zip_high_webp    : Int?    = 0;

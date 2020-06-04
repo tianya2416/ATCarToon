@@ -16,11 +16,11 @@ class ATMoreCell: UITableViewCell {
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var timeLab: UILabel!
     
-    var item : ATHomeItem = ATHomeItem(){
+    var item : ATHomeItem?{
         didSet{
-            let model = item
+            guard let model = item else { return }
             self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)
-            self.titleLab.text = model.name ?? ""
+            self.titleLab.text = model.name
             let content : String = model.content ?? ""
             let att = NSMutableAttributedString.init(string: content)
             let par = NSMutableParagraphStyle.init()

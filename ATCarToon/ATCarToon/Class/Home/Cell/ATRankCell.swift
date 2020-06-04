@@ -13,12 +13,12 @@ class ATRankCell: UITableViewCell {
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var mainView: UIView!
     
-    var model : ATRankModel = ATRankModel(){
+    var model : ATRankModel?{
         didSet{
-            let item = model;
-            self.titleLab.text = item.subTitle;
-            self.subTitleLab.text = (item.title! + "榜");
-            self.imageV.kf.setImage(with: URL.init(string:item.cover ?? ""),placeholder: placeholder);
+            guard let item = model else { return }
+            self.titleLab.text = item.subTitle
+            self.subTitleLab.text = (item.title! + "榜")
+            self.imageV.kf.setImage(with: URL.init(string:item.cover ?? ""),placeholder: placeholder)
         }
     }
     override func awakeFromNib() {

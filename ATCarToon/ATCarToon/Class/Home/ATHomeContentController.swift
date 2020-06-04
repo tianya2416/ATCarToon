@@ -9,7 +9,7 @@
 import UIKit
 
 class ATHomeContentController: UIViewController {
-    private lazy var searchBtn : UIButton = {
+    lazy var searchBtn : UIButton = {
         let btn : UIButton = UIButton.init();
         btn.frame = CGRect.init(x: 0, y: 0, width: 44, height: 44);
         btn.setImage(UIImage.init(named: "icon_home_search"), for: .normal);

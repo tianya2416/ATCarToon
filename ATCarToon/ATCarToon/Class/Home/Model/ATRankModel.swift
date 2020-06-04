@@ -13,7 +13,7 @@ class ATRankModel: HandyJSON {
     var title    : String? = "";
     var subTitle : String? = "";
     var argName  : String? = "";
-    var argCon   : Int = 0
+    var argCon   : Int     = 0
     var argValue : Int?    = 0;
     var cover    : String? = "";
     var rankingType : String? = "";

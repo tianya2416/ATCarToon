@@ -10,8 +10,8 @@ import UIKit
 import HandyJSON
 
 class ATHotModel: HandyJSON {
-    var editTime : TimeInterval? = 0;
-    var comicLists : [ATHomeInfo]? = [];
+    var editTime     :TimeInterval? = 0;
+    var comicLists   :[ATHomeInfo]? = [];
     var galleryItems :[ATBannerItem]? = [];
     
     var listData     : [Any]{

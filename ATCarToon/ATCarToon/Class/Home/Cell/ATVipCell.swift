@@ -13,11 +13,11 @@ class ATVipCell: UICollectionViewCell {
     @IBOutlet weak var titleLab: UILabel!
     @IBOutlet weak var imageV: UIImageView!
     
-    var item : ATHomeItem = ATHomeItem(){
+    var item : ATHomeItem?{
         didSet{
-            let model = item;
-            self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder);
-            self.titleLab.text = model.name ?? "";
+            guard let model = item else { return }
+            self.imageV.kf.setImage(with: URL.init(string: model.cover ?? ""),placeholder: placeholder)
+            self.titleLab.text = model.name ?? ""
         }
     }
     override func awakeFromNib() {

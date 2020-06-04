@@ -14,9 +14,9 @@ class ATVipReusableView: UICollectionReusableView {
     @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var rightBtn: UIButton!
     
-    var item : ATHomeInfo = ATHomeInfo(){
+    var item : ATHomeInfo?{
         didSet{
-            let model = item;
+            guard let model = item else { return }
             self.titleLab.text = model.itemTitle;
             self.leftImage.kf.setImage(with: URL.init(string: model.newTitleIconUrl ?? ""),placeholder: placeholder);
             self.rightBtn.isHidden = !model.canMore!;
@@ -27,7 +27,7 @@ class ATVipReusableView: UICollectionReusableView {
         // Initialization code
     }
     @IBAction func jumpAction(_ sender: UIButton) {
-        ATJump.jumpToMoreCtrl(argCon:self.item.argCon!,argName:self.item.argName!,argValue:self.item.argValue!,title: self.item.itemTitle!)
+        ATJump.jumpToMoreCtrl(argCon: self.item?.argCon ?? 0, argName: self.item?.argName ?? "", argValue: self.item?.argValue ?? 0, title: self.item?.itemTitle ?? "")
     }
     
 }
