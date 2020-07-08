@@ -18,7 +18,7 @@ class ATCommentCell: UITableViewCell {
     var item : ATComment?{
         didSet{
             guard let model = item else { return }
-            self.imageV.kf.setImage(with: URL.init(string: model.face!),placeholder: placeholder)
+            self.imageV.kf.setImage(with: URL.init(string: model.face ?? ""),placeholder: placeholder)
             self.titleLab.text = model.nickname ?? ""
             self.subTitleLab.text = model.sex!.count > 0 ? model.sex : "保密"
             

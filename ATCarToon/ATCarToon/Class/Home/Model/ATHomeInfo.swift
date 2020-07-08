@@ -58,6 +58,8 @@ class ATHomeItem: HandyJSON {
             self.ori_cover <-- ["ori","ori_cover"]
         mapper <<<
             self.author_name <-- ["author","author_name"]
+        mapper <<<
+            self.name <-- ["name","title"]
     }
     required init() {
         

@@ -18,6 +18,7 @@ class ATHotController: BaseConnectionController {
     }
     override func refreshData(page: Int) {
         ATMoya.apiMoya(target: .apiHot(sexType:5), sucesss: { (json) in
+            print(json);
             if let model = ATHotModel.deserialize(from: json.rawString()){
                 self.model = model;
             }
