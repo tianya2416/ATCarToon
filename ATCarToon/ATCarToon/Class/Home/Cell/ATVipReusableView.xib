@@ -13,21 +13,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gxd-dc-rl3">
-                    <rect key="frame" x="10" y="24" width="16" height="16"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="16" id="SKU-S2-NIO"/>
-                        <constraint firstAttribute="height" constant="16" id="sBf-pF-E1p"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="243" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0a-OT-PxN">
-                    <rect key="frame" x="28" y="22.5" width="231" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0a-OT-PxN">
+                    <rect key="frame" x="8" y="44.5" width="251" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whe-Sp-CrJ">
-                    <rect key="frame" x="271" y="14.5" width="49" height="35"/>
+                    <rect key="frame" x="271" y="37" width="49" height="35"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <inset key="contentEdgeInsets" minX="12" minY="5" maxX="12" maxY="5"/>
                     <state key="normal" image="icon_home_more">
@@ -39,16 +32,13 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="gxd-dc-rl3" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="4S2-nK-H5W"/>
+                <constraint firstItem="z0a-OT-PxN" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="8" id="7EU-1l-jvN"/>
                 <constraint firstItem="whe-Sp-CrJ" firstAttribute="centerY" secondItem="z0a-OT-PxN" secondAttribute="centerY" id="Qbl-pW-pGl"/>
                 <constraint firstAttribute="trailing" secondItem="whe-Sp-CrJ" secondAttribute="trailing" id="SH2-4b-SOr"/>
-                <constraint firstItem="z0a-OT-PxN" firstAttribute="leading" secondItem="gxd-dc-rl3" secondAttribute="trailing" constant="2" id="YwQ-du-IPW"/>
+                <constraint firstAttribute="bottom" secondItem="z0a-OT-PxN" secondAttribute="bottom" id="pyN-U6-VPw"/>
                 <constraint firstItem="whe-Sp-CrJ" firstAttribute="leading" secondItem="z0a-OT-PxN" secondAttribute="trailing" constant="12" id="rIY-yz-Ane"/>
-                <constraint firstItem="z0a-OT-PxN" firstAttribute="centerY" secondItem="gxd-dc-rl3" secondAttribute="centerY" id="rxS-Iv-LXP"/>
-                <constraint firstItem="gxd-dc-rl3" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="vl2-Vx-hyo"/>
             </constraints>
             <connections>
-                <outlet property="leftImage" destination="gxd-dc-rl3" id="S5W-DZ-eNN"/>
                 <outlet property="rightBtn" destination="whe-Sp-CrJ" id="kPM-bM-JYf"/>
                 <outlet property="titleLab" destination="z0a-OT-PxN" id="Gwm-30-dky"/>
             </connections>

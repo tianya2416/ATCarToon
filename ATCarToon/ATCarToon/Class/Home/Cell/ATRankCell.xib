@@ -17,22 +17,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tf7-rT-Sk8">
-                        <rect key="frame" x="12" y="6" width="364" height="205"/>
+                        <rect key="frame" x="8" y="4" width="372" height="209.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tf7-rT-Sk8" secondAttribute="height" multiplier="16:9" id="03q-Su-Xi2"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-sW-zlY">
-                        <rect key="frame" x="12" y="6" width="364" height="205"/>
+                        <rect key="frame" x="8" y="4" width="372" height="209.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFF-eX-jlX">
-                                <rect key="frame" x="8" y="8" width="348" height="17"/>
+                                <rect key="frame" x="10" y="10" width="352" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-Yg-p4K">
-                                <rect key="frame" x="316.5" y="177.5" width="39.5" height="19.5"/>
+                                <rect key="frame" x="322.5" y="180" width="39.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -40,23 +40,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.17514854753521128" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hFF-eX-jlX" firstAttribute="leading" secondItem="B2f-sW-zlY" secondAttribute="leading" constant="8" id="CFC-na-Llg"/>
-                            <constraint firstAttribute="bottom" secondItem="jIn-Yg-p4K" secondAttribute="bottom" constant="8" id="UPH-W5-42f"/>
-                            <constraint firstAttribute="trailing" secondItem="hFF-eX-jlX" secondAttribute="trailing" constant="8" id="WpI-WF-8H4"/>
-                            <constraint firstAttribute="trailing" secondItem="jIn-Yg-p4K" secondAttribute="trailing" constant="8" id="pJ1-j8-lJB"/>
-                            <constraint firstItem="hFF-eX-jlX" firstAttribute="top" secondItem="B2f-sW-zlY" secondAttribute="top" constant="8" id="ucc-iu-DJm"/>
+                            <constraint firstItem="hFF-eX-jlX" firstAttribute="leading" secondItem="B2f-sW-zlY" secondAttribute="leading" constant="10" id="CFC-na-Llg"/>
+                            <constraint firstAttribute="bottom" secondItem="jIn-Yg-p4K" secondAttribute="bottom" constant="10" id="UPH-W5-42f"/>
+                            <constraint firstAttribute="trailing" secondItem="hFF-eX-jlX" secondAttribute="trailing" constant="10" id="WpI-WF-8H4"/>
+                            <constraint firstAttribute="trailing" secondItem="jIn-Yg-p4K" secondAttribute="trailing" constant="10" id="pJ1-j8-lJB"/>
+                            <constraint firstItem="hFF-eX-jlX" firstAttribute="top" secondItem="B2f-sW-zlY" secondAttribute="top" constant="10" id="ucc-iu-DJm"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="B2f-sW-zlY" firstAttribute="bottom" secondItem="tf7-rT-Sk8" secondAttribute="bottom" id="AXv-ud-ubM"/>
                     <constraint firstItem="B2f-sW-zlY" firstAttribute="top" secondItem="tf7-rT-Sk8" secondAttribute="top" id="FVZ-un-Rl5"/>
-                    <constraint firstItem="tf7-rT-Sk8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="SHA-2C-HQz"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tf7-rT-Sk8" secondAttribute="bottom" constant="6" id="VAe-yG-Sy4"/>
-                    <constraint firstItem="tf7-rT-Sk8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Vai-Gk-Nql"/>
+                    <constraint firstItem="tf7-rT-Sk8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SHA-2C-HQz"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tf7-rT-Sk8" secondAttribute="bottom" constant="4" id="VAe-yG-Sy4"/>
+                    <constraint firstItem="tf7-rT-Sk8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Vai-Gk-Nql"/>
                     <constraint firstItem="B2f-sW-zlY" firstAttribute="leading" secondItem="tf7-rT-Sk8" secondAttribute="leading" id="bkF-UQ-hft"/>
                     <constraint firstItem="B2f-sW-zlY" firstAttribute="trailing" secondItem="tf7-rT-Sk8" secondAttribute="trailing" id="fL9-LY-P6y"/>
-                    <constraint firstAttribute="trailing" secondItem="tf7-rT-Sk8" secondAttribute="trailing" constant="12" id="ifo-Py-HnS"/>
+                    <constraint firstAttribute="trailing" secondItem="tf7-rT-Sk8" secondAttribute="trailing" constant="8" id="ifo-Py-HnS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

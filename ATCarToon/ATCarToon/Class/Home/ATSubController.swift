@@ -42,22 +42,22 @@ class ATSubController: BaseConnectionController {
         return info.comics!.count;
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 12;
+        return 8;
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 12;
+        return 8;
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 12, left: 12, bottom: 12, right: 12);
+        return UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8);
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (SCREEN_WIDTH - 4*12 - 1)/3
-        let height = width * 1.4 + 30;
+        let width = (SCREEN_WIDTH - 4*8 - 1)/3
+        let height = width * 1.4 + 40;
         return CGSize.init(width: width, height: height);
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let info : ATHomeInfo = self.listData[section];
-        return CGSize.init(width: SCREEN_WIDTH, height: info.comics!.count > 0 ? 30 : 0.001);
+        return CGSize.init(width: SCREEN_WIDTH, height: info.comics!.count > 0 ? 25 : 0.001);
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let info : ATHomeInfo = self.listData[indexPath.section];

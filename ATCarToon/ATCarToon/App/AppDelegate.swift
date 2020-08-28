@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
 
     }
+//    func getName() ->(name : String, age :Int){
+//        return ("lvbu",20)
+//    }
     open func supportedInterfaceOrientations(for window: UIWindow?) -> UIInterfaceOrientationMask{
         return .allButUpsideDown
         //self.makeOrientation == UIInterfaceOrientation.landscapeRight ? UIInterfaceOrientationMask.all : UIInterfaceOrientationMask.portrait;

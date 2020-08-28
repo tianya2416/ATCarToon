@@ -27,25 +27,30 @@ class ATHomeContentController: UIViewController {
         ctrl.magicView.separatorColor = UIColor.clear;
         ctrl.magicView.navigationColor = Appxffffff;
         ctrl.magicView.switchStyle = .default;
-        ctrl.magicView.sliderColor = Appxffffff;
+        ctrl.magicView.sliderColor = AppColor;
+        ctrl.magicView.sliderHeight = 3
+        ctrl.magicView.sliderWidth = 25
+        ctrl.magicView.sliderOffset = -5
+        ctrl.magicView.bubbleRadius = 1.5
         
         ctrl.magicView.layoutStyle = .default;
-        ctrl.magicView.sliderStyle = .bubble;
-        ctrl.magicView.bubbleInset = UIEdgeInsets.init(top: 3, left: 8, bottom: 3, right: 8)
+        ctrl.magicView.sliderStyle = .default;
+
+//        ctrl.magicView.bubbleInset = UIEdgeInsets.init(top: 3, left: 8, bottom: 3, right: 8)
         ctrl.magicView.navigationHeight = 44;
-        ctrl.magicView.itemSpacing = 25;
+        ctrl.magicView.itemSpacing = 20;
         ctrl.magicView.isAgainstStatusBar = true;
         ctrl.magicView.dataSource = self;
         ctrl.magicView.delegate = self;
-        ctrl.magicView.itemScale = 1.05;
+        ctrl.magicView.itemScale = 1;
         ctrl.magicView.needPreloading = true;
         ctrl.magicView.bounces = false;
         ctrl.magicView.isScrollEnabled = true;
-        let sliderView = UIView.init();
-        sliderView.layer.cornerRadius = AppRadius;
-        sliderView.layer.borderWidth = 1.25;
-        sliderView.layer.borderColor = AppColor.cgColor;
-        ctrl.magicView.setSlider(sliderView)
+//        let sliderView = UIView.init();
+//        sliderView.layer.cornerRadius = AppRadius;
+//        sliderView.layer.borderWidth = 1.2;
+//        sliderView.layer.borderColor = AppColor.cgColor;
+//        ctrl.magicView.setSlider(sliderView)
         return ctrl;
     }()
     override func viewDidLoad() {
@@ -70,9 +75,9 @@ extension ATHomeContentController : VTMagicViewDataSource,VTMagicViewDelegate{
     }
     func magicView(_ magicView: VTMagicView, menuItemAt itemIndex: UInt) -> UIButton {
         let button : UIButton = magicView.dequeueReusableItem(withIdentifier: "www.new.btn.identy") ?? UIButton.init();
-        button.setTitleColor(Appx333333, for: .normal);
-        button.setTitleColor(AppColor, for: .selected);
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16);
+        button.setTitleColor(UIColor(hex: "181818"), for: .normal);
+        button.setTitleColor(UIColor(hex: "181818"), for: .selected);
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         return button;
     }
     func magicView(_ magicView: VTMagicView, viewControllerAtPage pageIndex: UInt) -> UIViewController {

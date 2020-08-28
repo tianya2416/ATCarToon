@@ -23,6 +23,7 @@ class ATDetailTopView: UIView {
         self.imageV.layer.masksToBounds = true
         self.imageV.layer.borderWidth = 1
         self.imageV.layer.borderColor = Appxffffff.cgColor
+        self.imageV.layer.cornerRadius = AppRadius
     }
     var item :ATHomeItem = ATHomeItem(){
         didSet{
@@ -38,14 +39,14 @@ class ATDetailTopView: UIView {
             var firstLab : UIButton? = nil
             for object in model.tags! {
                 let label : UIButton = UIButton.init()
-                label.contentEdgeInsets  = UIEdgeInsets.init(top: 3, left: 6, bottom: 3, right: 6)
+                label.contentEdgeInsets  = UIEdgeInsets.init(top: 2, left: 6, bottom: 2, right: 6)
                 label.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-                label.setTitleColor(Appxffffff, for: .normal)
+                label.setTitleColor(Appxdddddd, for: .normal)
                 label.setTitle(object, for: .normal)
                 label.layer.masksToBounds = true
                 label.layer.cornerRadius = AppRadius
-                label.layer.borderWidth = 0.6
-                label.layer.borderColor = Appxffffff.cgColor
+                label.layer.borderWidth = 1
+                label.layer.borderColor = Appxdddddd.cgColor
                 label.isUserInteractionEnabled = false
                 self.addSubview(label)
                 if firstLab != nil {
@@ -64,6 +65,9 @@ class ATDetailTopView: UIView {
             self.titleLab.text = model.name ?? ""
             self.setContent(content: model.content ?? "")
             self.setImageUrl(url: model.cover ?? "")
+//            _ = self.tagView.subviews.map {
+//                $0.removeFromSuperview()
+//            }
         }
     }
     func setContent(content : String){

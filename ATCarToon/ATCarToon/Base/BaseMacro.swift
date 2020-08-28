@@ -30,7 +30,7 @@ let Appx666666   :UIColor = UIColor.init(hex:"666666")
 let Appx999999   :UIColor = UIColor.init(hex:"999999")
 let Appxf8f8f8   :UIColor = UIColor.init(hex:"f8f8f8")
 let Appxffffff   :UIColor = UIColor.init(hex:"ffffff")
-let AppRadius    :CGFloat = 3
+let AppRadius    :CGFloat = 2
 let placeholder  :UIImage = UIImage.imageWithColor(color: UIColor.init(hex: "dedede"));
 
 let itemTop          :CGFloat = 1;

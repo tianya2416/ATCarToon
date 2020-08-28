@@ -13,6 +13,7 @@ class ATMoreController: BaseTableViewController {
     var argValue:Int      = 0
     var argName:String?   = ""
     var titleName:String? = ""
+    private var config :ATDefault?
     lazy var listData : [ATHomeItem] = {
         return []
     }()
@@ -39,6 +40,7 @@ class ATMoreController: BaseTableViewController {
             if let listData = [ATHomeItem].deserialize(from:json["comics"].rawString()){
                 datas = listData as! [ATHomeItem]
             }
+            self.config = ATDefault.deserialize(from: json["defaultParameters"].rawString())
             self.listData.append(contentsOf: datas)
             self.tableView.reloadData()
             self.endRefresh(more: datas.count > 0);

@@ -35,8 +35,8 @@ class ATHomeItem: HandyJSON {
     var name       : String?;
     var subTitle   : String?;
     var content    : String?;
-    var conTag     : Int? = 0;
-    var last_update_time: TimeInterval? = 0;
+    var conTag     : Int? = 0;//月票榜
+    var last_update_time: TimeInterval? = 0;//最近更新
     var comicId    : String? = ""
     var author_name: String? = ""
     var cover      : String? = ""
@@ -50,8 +50,6 @@ class ATHomeItem: HandyJSON {
             self.content <-- ["content","description"]
         mapper <<<
             self.tags   <-- ["tags","theme_ids"]
-        mapper <<<
-            self.conTag <-- ["conTag","last_update_time"]
         mapper <<<
             self.cover  <-- ["cover","coverUrl"]
         mapper <<<
@@ -107,5 +105,12 @@ class ATDetailInfo : ATHomeItem{
         }set{
             
         }
+    }
+}
+class ATDefault  : HandyJSON{
+    var defaultSelection        : Int?    = 0
+    var defaultArgCon           : Int?    = 0
+    var defaultConTagType       : String? = "";
+    required init() {
     }
 }

@@ -50,14 +50,14 @@ class ATHotController: BaseConnectionController {
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (SCREEN_WIDTH - 6)/2
-        let height = width/5 * 3 + 55;
+        let height = width/5 * 3 + 60;
         return CGSize.init(width: width, height: height);
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let info = self.model.listData[section];
         if  info is ATHomeInfo {
             let home : ATHomeInfo = info as! ATHomeInfo;
-            return CGSize.init(width: SCREEN_WIDTH, height: home.listData.count > 0 ? 30 : 0.001);
+            return CGSize.init(width: SCREEN_WIDTH, height: home.listData.count > 0 ? 20 : 0.001);
         }else if info is [Any]{
             let home : [ATBannerItem] = info as! [ATBannerItem];
             return CGSize.init(width: SCREEN_WIDTH, height: home.count == 0 ? 0.0001 : SCREEN_WIDTH/16*7.0);

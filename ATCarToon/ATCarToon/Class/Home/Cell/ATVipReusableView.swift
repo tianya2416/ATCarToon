@@ -17,9 +17,9 @@ class ATVipReusableView: UICollectionReusableView {
     var item : ATHomeInfo?{
         didSet{
             guard let model = item else { return }
-            self.titleLab.text = model.itemTitle;
-            self.leftImage.kf.setImage(with: URL.init(string: model.newTitleIconUrl ?? ""),placeholder: placeholder);
-            self.rightBtn.isHidden = !model.canMore!;
+            self.titleLab.text = model.itemTitle
+           // self.leftImage.kf.setImage(with: URL.init(string: model.newTitleIconUrl ?? ""),placeholder: placeholder)
+            self.rightBtn.isHidden = !model.canMore!
         }
     }
     override func awakeFromNib() {
